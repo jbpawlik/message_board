@@ -32,4 +32,9 @@ class Board
     @@boards[id]
   end
 
+  def update(name)
+    @name = name
+  end
+
 end
+

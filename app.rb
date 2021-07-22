@@ -34,4 +34,17 @@ get('/boards/:id') do
   erb(:board)
 end
 
+get('/boards/:id/edit') do
+  @board = Board.find(params[:id].to_i())
+  erb(:edit_board)
+end
 
+patch('/boards/:id') do
+  @board = Board.find(params[:id].to_i())
+  @board.update(params[:name])
+  @boards = Board.all
+  erb(:boards)
+end
+
+
+# attributes.fetch(:name)

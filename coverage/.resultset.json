@@ -1,67 +1,12 @@
 {
   "RSpec": {
     "coverage": {
-      "C:/Users/redux/Epicodus/Week9/message_board/spec/board_spec.rb": {
+      "C:/Users/redux/Epicodus/Week9/message_board/lib/board.rb": {
         "lines": [
-          1,
-          1,
-          1,
-          1,
-          null,
-          1,
-          null,
-          1,
-          5,
-          null,
-          null,
-          1,
-          1,
-          1,
-          null,
-          null,
-          null,
-          1,
-          1,
-          1,
-          1,
-          1,
-          null,
-          null,
-          null,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          null,
-          null,
-          null,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          null,
-          null,
-          null,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          null,
-          null,
-          null
+
         ]
       }
     },
-    "timestamp": 1626990063
+    "timestamp": 1626991837
   }
 }

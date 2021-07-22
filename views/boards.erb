@@ -1,1 +1,17 @@
-<h1>test</h1>
+<h1>Shrimp Talk Message Board</h1>
+<h3>Surfin' the Net</h3>
+<br>
+<h2>Surf Boards:</h2>
+
+<% if @boards.any? %>
+  <ul>
+    <% @boards.each do |board| %>
+    <li><a href="/boards/<%= board.id %>"><%= board.name %></a></li>
+  <% end %>
+  </ul>
+
+  <% else %>
+    <p>There are no boards to display. Do you want to make a new one?</p>
+  <% end %>
+<br>
+  <h4><a href="/boards/new">Add a New Board</a></h4>

@@ -58,34 +58,8 @@ describe '#board' do
     it('will update an board') do
       board = Board.new({:name => "forum", :id => nil, :timestamp => Time.new})
       board.save
-      board.update({:name => "shrimp talk", :id => nil, :timestamp => nil})
-      expect(board.name).to(eq({:id=>nil, :name=>"shrimp talk", :timestamp=> nil}))
+      board.update({:name => "shrimp talk"})
+      expect(board.name).to(eq({:name=>"shrimp talk"}))
     end
   end
 end
-
-# describe("#name") do
-#   it("returns the name of an album") do
-#     album = Album.new({:name => "In Rainbows", :artist => "Radiohead", :year => 2007, :genre => "Rock", :length => "42:39"})
-#     expect(album.name()).to(eq("In Rainbows"))
-#   end
-# end
-
-
-# describe('#update') do
-#   it("updates an album by id") do
-#     album = Album.new("Giant Steps", nil, nil, nil, nil)
-#     album.save()
-#     album.update("A Love Supreme", nil, nil, nil)
-#     expect(album.name).to(eq("A Love Supreme"))
-#   end
-# end
-
-
-# def self.search(name)
-#   @@albums.select {|album, values| album.name == name}
-# end
-
-# def self.search(name)
-#   @@albums.values.select {|album| album.name == name}
-# end

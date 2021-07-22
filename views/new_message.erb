@@ -1,0 +1,9 @@
+<h1>Create a new message</h1>
+
+<form action="/message/<%= @message.id %>" method="post">
+  <label name="name">create your message</label>
+  <input type="text" name="name" class="form-control">
+  <button type="submit" class="btn">Post message'</button>
+</form>
+
+<a href="/board/messages">Go back to messages</a>

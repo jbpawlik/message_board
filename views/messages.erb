@@ -1,0 +1,17 @@
+<h1>Shrimp Talk Messages</h1>
+<h3>Surfin' the Net</h3>
+<br>
+<h2>Surf Boards:</h2>
+
+<% if @messages.any? %>
+  <ul>
+    <% @messages.each do |message| %>
+    <li><a href="/messages/<%= message.id %>"><%= message.name %></a></li>
+  <% end %>
+  </ul>
+
+  <% else %>
+    <p>There are no messages to display. Do you want to make a new one?</p>
+  <% end %>
+<br>
+  <h4><a href="/messages/new">Add a New Board</a></h4>

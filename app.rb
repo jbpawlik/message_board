@@ -46,5 +46,21 @@ patch('/boards/:id') do
   erb(:boards)
 end
 
+get('/boards/messages/new') do
+  
+  erb(:new_message)
+end
 
-# attributes.fetch(:name)
+get('/boards/:id/messages/:message_id') do
+  @message = Message.find(params[:message_id].to_i())
+  erb(:message)
+end
+
+
+
+post('/boards/:id/messages') do
+  @board = Board.find(params[:id].to_i())
+  message = Message.new(params[:message_name], @board.id, nil)
+  message.save()
+  erb(:album)
+end

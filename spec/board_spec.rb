@@ -1,7 +1,7 @@
-require 'rspec'
-require 'board'
 require 'simplecov'
 SimpleCov.start
+require 'rspec'
+require 'board'
 
 describe '#board' do
 
@@ -41,6 +41,16 @@ describe '#board' do
       board2.save
       Board.clear
       expect(Board.all).to(eq([]))
+    end
+  end
+
+  describe('.find') do
+    it("will find a board by its id") do
+      board = Board.new({:name => "forum", :id => nil, :timestamp => Time.new})
+      board.save
+      board2 = Board.new({:name => "forum", :id => nil, :timestamp => Time.new})
+      board2.save
+      expect(Board.find(board2.id)).to(eq(board2))
     end
   end
 end

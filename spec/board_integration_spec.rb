@@ -21,3 +21,11 @@ describe('create a new board', {:type => :feature}) do
     expect(page).to have_content('Shrimp Biscuit')
   end
 end
+
+describe('locate new board', {:type => :feature}) do
+  it('take user to new board page') do
+    visit('/')
+    click_on('Shrimp Biscuit')
+    expect(page).to have_content('Shrimp Biscuit')
+  end
+end

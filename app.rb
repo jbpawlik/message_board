@@ -24,3 +24,14 @@ post('/boards') do
   board.save
   redirect to('/boards')
 end
+
+get('/boards/new') do
+  erb(:new_board)
+end
+
+get('/boards/:id') do
+  @board = Board.find(params[:id].to_i())
+  erb(:board)
+end
+
+

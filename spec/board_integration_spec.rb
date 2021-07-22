@@ -1,7 +1,7 @@
-require('capybara/rspec')
-require('./app')
 require 'simplecov'
 SimpleCov.start
+require('capybara/rspec')
+require('./app')
 Capybara.app = Sinatra::Application
 set(:show_exceptions, false)
 
